@@ -1,7 +1,7 @@
 import logging
 
 
-LOG_FILE = "az-sdk.log"
+LOG_FILE = "Auto-Az-Spark.log"
 
 
 class FiltroAzure(logging.Filter):

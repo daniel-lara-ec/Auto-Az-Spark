@@ -27,6 +27,12 @@ sudo apt-get upgrade -y
 sudo apt-get install -y python3-pip
 check_success "No se pudo instalar Pip."
 
+pip3 install python-dotenv
+check_success "No se pudo instalar python-dotenv."
+
+pip3 install pandas
+check_success "No se pudo instalar pandas."
+
 # --- Instalación Wget
 sudo apt-get install -y wget
 check_success "No se pudo instalar Wget."

@@ -14,7 +14,7 @@
   <p align="center">
     Automatización para el despliegue de un cluster de Apache Spark con Azure, Cloudflare y Azure DevOps
     <br />
-    <a href="https://github.com/daniel-lara-ec/spark-scala-dmlaran/issues">Reportar un Problema</a>
+    <a href="https://github.com/daniel-lara-ec/Auto-Az-Spark/issues">Reportar un Problema</a>
     <br />
     <br />
   </p>
@@ -40,15 +40,44 @@ Este proyecto en Python proporciona una herramienta de línea de comandos para g
 
 El script está diseñado para simplificar tareas repetitivas de administración y despliegue, facilitando la gestión integral de la infraestructura.
 
-- Uso del script
+### Uso del script
+
+Para su uso es necesario definir las variables de entorno en el archivo `.env`. A continuación un ejemplo:
+
+```
+ID_SUSRCIPCION="idsuscripcion"
+NOMBRE_CLUSTER="cluster"
+NUMERO_NODOS="1"
+TAMANIO_INSTANCIA_DRIVER="Standard_B2"
+GRUPO_RECURSOS="GrupoRecursos"
+NOMBRE_RED_VIRTUAL="Vnet"
+NOMBRE_SUBRED="Subnet"
+NOMBRE_CLAVE_SSH="clavessh"
+REGION="eastus"
+USERNAMEAZ="usuario"
+GRUPO_RECURSOS_VNET="GrupoRecursos"
+TAMANIO_INSTANCIA_WORKER="Standard_D2"
+IP_PUBLICA="1.1.1.1"
+RUTA_SCRIPTS_DEPENDENCIAS="C:/Usuario/user/scripts"
+CLOUDFLARE_TOKEN="token-secreto"
+ZONA_DNS="dominio.com"
+ZONA_DNS_ID="id-zona"
+PATRON_DNS="cluster.spark"
+CORREO_CLOUDFLARE="correo@mail.com"
+CLAVE_PRIVADA_DEVOPS="C:/Usuario/user/id_rsa"
+```
 
 El script puede ejecutarse desde la línea de comandos con diferentes argumentos para gestionar el clúster.
 
--- Crear un recurso
+- Crear un recurso
 
 ```
 python main.py --crear
 ```
+
+#### Nota
+
+Esta automatización utiliza un mirror propio para la instalación de Hadoop y Spark. Esto se hizo con la intención de garantizar la estabilidad de los enlaces en el tiempo. Para el uso se puede cambiar esto pues los archivos no tienen ninguna modificación en particular.
 
 ### Contenido del Repositorio
 
@@ -56,7 +85,7 @@ En construcción...
 
 ## Créditos
 
-**Daniel Matías Lara** (naranjolm99@gmail.com)
+**Daniel Matías Lara** (dmlaran@alephsub0.org)
 
 [![LinkedIn][linkedin-shield]][linkedin-url-dmln]
 
@@ -68,15 +97,15 @@ Distribuido bajo la licencia MIT.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/daniel-lara-ec/spark-scala-dmlaran.svg?style=for-the-badge
-[contributors-url]: https://github.com/daniel-lara-ec/spark-scala-dmlaran/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/daniel-lara-ec/spark-scala-dmlaran.svg?style=for-the-badge
-[forks-url]: https://github.com/daniel-lara-ec/spark-scala-dmlaran/forks
-[stars-shield]: https://img.shields.io/github/stars/daniel-lara-ec/spark-scala-dmlaran?style=for-the-badge
-[stars-url]: https://github.com/daniel-lara-ec/spark-scala-dmlaran/stargazers
-[issues-shield]: https://img.shields.io/github/issues/daniel-lara-ec/spark-scala-dmlaran.svg?style=for-the-badge
-[issues-url]: https://github.com/daniel-lara-ec/spark-scala-dmlaran/issues
-[license-shield]: https://img.shields.io/github/license/daniel-lara-ec/spark-scala-dmlaran.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/contributors/daniel-lara-ec/Auto-Az-Spark.svg?style=for-the-badge
+[contributors-url]: https://github.com/daniel-lara-ec/Auto-Az-Spark/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/daniel-lara-ec/Auto-Az-Spark.svg?style=for-the-badge
+[forks-url]: https://github.com/daniel-lara-ec/Auto-Az-Spark/forks
+[stars-shield]: https://img.shields.io/github/stars/daniel-lara-ec/Auto-Az-Spark?style=for-the-badge
+[stars-url]: https://github.com/daniel-lara-ec/Auto-Az-Spark/stargazers
+[issues-shield]: https://img.shields.io/github/issues/daniel-lara-ec/Auto-Az-Spark.svg?style=for-the-badge
+[issues-url]: https://github.com/daniel-lara-ec/Auto-Az-Spark/issues
+[license-shield]: https://img.shields.io/github/license/daniel-lara-ec/Auto-Az-Spark.svg?style=for-the-badge
 [license-url]: https://es.wikipedia.org/wiki/Licencia_MIT
 [linkedin-shield]: https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white
 [linkedin-url-dmln]: https://www.linkedin.com/in/mat-daniel-lara/
