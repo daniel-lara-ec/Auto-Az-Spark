@@ -1,0 +1,8 @@
+__pycache__/
+.venv/
+.vscode/
+*.log
+.env
+*.pem
+id_rsa*
+*.csv
