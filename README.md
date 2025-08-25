@@ -75,6 +75,8 @@ El script puede ejecutarse desde la línea de comandos con diferentes argumentos
 python main.py --crear
 ```
 
+Documentación sobre los prerrequisitos necesarios la puedes encontrar en: [Requisitos](docs/Requisitos.md)
+
 #### Nota
 
 Esta automatización utiliza un mirror propio para la instalación de Hadoop y Spark. Esto se hizo con la intención de garantizar la estabilidad de los enlaces en el tiempo. Para el uso se puede cambiar esto pues los archivos no tienen ninguna modificación en particular.
